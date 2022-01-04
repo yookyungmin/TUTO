@@ -25,6 +25,8 @@ class FireEngine extends Care{ //소방차
 public class Caree {
 
 	public static void main(String args[]) {
+		
+
 ////		Care c = new Care();
 		FireEngine fe = new FireEngine(); // 객체 생성
 		fe.water();
@@ -39,7 +41,7 @@ public class Caree {
 		FireEngine fe2=(FireEngine)c;
 		fe2.water();
 		fe2.stop();
-		//====================================================================================
+//		====================================================================================
 //		
 //		Care c3 =(Care)fe;
 //		
