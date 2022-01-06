@@ -41,6 +41,8 @@ public class Caree {
 		FireEngine fe2=(FireEngine)c;
 		fe2.water();
 		fe2.stop();
+		
+	
 //		====================================================================================
 //		
 //		Care c3 =(Care)fe;
