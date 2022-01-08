@@ -23,6 +23,7 @@ public class LottoBubble {
 				System.out.print("게임수입력>>");
 //				game= Integer.parseInt(sc.nextLine()); NumberFormatException 발생 catch문 처리해야됨
 				game = sc.nextInt();
+			
 				} catch(InputMismatchException e) {//스캐너가 정수로 받는데 문자로 입력하면 오류
 					System.out.println("문자 입력 오류");
 					sc.nextLine();//입력 버퍼에 있는 문자열을 읽어서비운다
@@ -64,6 +65,8 @@ public class LottoBubble {
 	}
 				System.out.println("잔액:"+(money-game*1000)+"원");
 }	//main
+	
+	
 	public static int[] bubbleSort(int[] ary) {
 		int temp;
 		boolean sw;
@@ -79,12 +82,12 @@ public class LottoBubble {
 				if(sw)break;
 		} //end for k
 			return ary;
-	}//bubbleSort 버블정렬 //두수 비교해서 작은수가 왼쪽으로
+	}//bubbleSort 버블정렬메서드 //두수 비교해서 작은수가 왼쪽으로
 	public static void aryPrint(String title, int[] ary) {
 		System.out.print(title);
 		for(int i=0; i<ary.length;i++) {
 			System.out.print(ary[i]);
-			if(i<ary.length-1)
+			if(i<ary.length-1) //배열의 마지막 숫자보다 작으면, 
 				System.out.println(",");
 		}
 		System.out.println();//줄바꿈
