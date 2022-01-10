@@ -78,8 +78,10 @@ class Villain extends Person{
 	public int getWeapon() {return weapon;}
 	public void setWweapon(int weapon) {this.weapon = weapon;}
 	
-	public double getPower() {return power;	}
-	public void setPower(double power) {this.power = power;}
+	public double getPower() {return power;}
+	public void setPower(double power) {
+		this.power = power;
+	}
 	
 	//pintPerson 메서드
 	public void printPerson() {
@@ -122,24 +124,36 @@ class Villain extends Person{
 
 class Hero extends Person{
 	//필드
+//	private String unique_key;
+//	private int weapon;
+//	private double power;
+	
 	private String unique_key;
 	private int weapon;
 	private double power;
+	
+	
 	//생성자
 	Hero(){}//기본생성자
 	
 	Hero(String name, int age, int height, int weaigth, String unique_key, int weapon, double power){
-		super(name, age, height, weaigth); //조상 생성자 호추
+		super(name, age, height, weaigth); //조상 생성자 호출
 		this.unique_key = unique_key; //this.unique_key 인스턴스변수 = unique_key 지역변수 this. 구분
 		this.weapon = weapon;
 		this.power = power;
 	}
+	Hero(String name, int age, int height, int weapon){
+		super(name, age, height, weapon);
+		this.weapon = weapon; 
+		
+	}
 	
 	
 	//메서드
-	public String getUnique_key() {return unique_key;}
+	public String getUnique_key() {return unique_key;} 
 	public void setUnique_key(String unique_key) {this.unique_key = unique_key;}
-
+	
+	
 
 	public int getWeapon() {return weapon;}
 	public void setWeapon(int weapon) {this.weapon = weapon;}
@@ -223,6 +237,10 @@ public class Java100gettersetter {
 		h1.printPerson();
 		System.out.println(h1.getName()+" ");
 		h1.move();
+		
+		Hero h2 = new Hero("건슬링",20,180,1);
+		h2.printPerson();
+		
 		
 	}
 

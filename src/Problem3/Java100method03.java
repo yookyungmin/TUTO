@@ -8,7 +8,7 @@ public class Java100method03 {
 		ret*=100;
 		
 		return ret;  //--- 10000
-	} //retunmethod 메소드 작성
+	} 	//retunmethod 메소드 작성
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
