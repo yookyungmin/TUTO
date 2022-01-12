@@ -215,7 +215,8 @@ public class Java100gettersetter {
 //		System.out.println(p1.getHeight());
 		
 		//객체생성1
-		Villain v1 = new Villain("좀비",20,180,80,"1500",2,99.5);
+
+
 		v1.printPerson();
 		System.out.println(v1.getName()+" ");
 		v1.move(); //부모클래스의 move()메서드를 호출
