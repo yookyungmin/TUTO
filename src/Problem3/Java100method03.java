@@ -18,6 +18,7 @@ public class Java100method03 {
 		
 		int rst;
 		rst = returnMethod();
+
 		
 		//[2] 출력
 		System.out.println("메서드 호출에 따른 리턴된값은="+rst);

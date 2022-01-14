@@ -6,6 +6,7 @@ package Problem3;
 //	
 //	System.out.printf("인자로 넘겨받은 2개의 값%d과 %d입니다",a,b);
 //	//연산 추력
+
 //	System.out.println();
 //	int rst =a+b;
 //	System.out.println("두수를 더한값은 "+rst);

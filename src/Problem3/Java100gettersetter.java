@@ -202,6 +202,7 @@ class Hero extends Person{
 }
 
 
+
 public class Java100gettersetter {
 	
 
@@ -215,7 +216,7 @@ public class Java100gettersetter {
 //		System.out.println(p1.getHeight());
 		
 		//객체생성1
-
+		Villain v1 = new Villain("강시",50,167,60,"190000",1,55.9);
 
 		v1.printPerson();
 		System.out.println(v1.getName()+" ");
