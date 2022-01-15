@@ -80,7 +80,7 @@ public class Java100generic {
 		//[4] 위와 같이 사용시 -->단점
 		//s1 문자열
 		s1.getObj();
-//		ㅋ
+//		
 	}
 
 }
