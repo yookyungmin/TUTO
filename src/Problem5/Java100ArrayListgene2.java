@@ -8,20 +8,21 @@ public class Java100ArrayListgene2 {
 		//ArrayList 제네릭사용
 		ArrayList<String> ar = new ArrayList<String>();
 		
+		
 		//[1]추가 add
 		ar.add("홍길동");
 		ar.add("이순신");
 		ar.add("강감찬");
 		ar.add("을지문덕");
 		ar.add("김유신");
-		System.out.println(ar.get(3));
-		String str = ar.get(0); //형변환 없이 바로사용 타입안정성 높아짐
+		System.out.println(ar.get(3)); //을지문덕
+		String str = ar.get(0); //형변환 없이 바로사용 타입안정성 높아짐  String str = (String)ar.get(3) xx
 //		int str = (int)ar.get(0); //컴파일 단계에서 오류발견
 		
 		
 		
 		//[3] 수정 -->set (인덱스 수정값
-		ar.set(3, "징기스칸");
+		ar.set(3, "징기스칸"); // 을지문덕 > 징기스칸
 		System.out.println(ar.get(3));
 		
 		//[4] 삭제 -- > 2가지(하나만 삭제, 한꺼번에 삭제)-->remove (인덱스) 하나만삭제
