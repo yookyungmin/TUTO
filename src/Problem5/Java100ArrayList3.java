@@ -2,7 +2,7 @@ package Problem5;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-
+//2차원배열
 public class Java100ArrayList3 {
 
 	public static void main(String[] args) {
