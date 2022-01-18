@@ -23,6 +23,7 @@ public class Java100Iterator2 {
 		list.add(2);
 		list.add(3);
 		list.add(4);
+		list.add(5);
 		
 		//[3] 객체 Iterator 반복자 객체생성
 		Iterator<Integer> iter = list.iterator();
@@ -33,16 +34,50 @@ public class Java100Iterator2 {
 			}
 		System.out.println();
 
+		
+		
 		//[5-1] 요소삭제 반복문 없이 한개요소만 삭제
-		System.out.println(list.get(1));//2
-		list.remove(1); //2번삭제
-		System.out.println(list.get(1));//3 
+//		System.out.println(list.get(1));//2
+//		list.remove(1); //2번삭제
+//		System.out.println(list.get(1));//3 
 		
 		//[5-2] 요소 삭제 while 반복문 사용
-	
+		System.out.println("-------------------------");
+//		
+//		for(Integer i: list)
+		//if(i==2)
+//			list.remove(i);
+////			System.out.print(i+" "); 
+//		System.out.println(); // java.util.ConcurrentModificationException 발생 반복문안에서 삭제하고자할떄  
+		// List를 for문에 넣고 돌리면서 값을 remove() 할 때 발생합니다. 
+		//값을 삭제시 데이터가 변하게 되고, 시작할 때 데이터 상태와 달라지게 됩니다. 
+		//즉, index 값이 변합니다. 해결방법은 iterator을 이용하여 해결합니다
+		
+		
+//		for(Integer i: list)
+//			System.out.print(i+" ");
+//		System.out.println(); //향상된 for문 1234
+		
+		while(iter.hasNext()) {
+			Integer i = iter.next();
+		if(i==3) {
+			iter.remove();
+			System.out.println(i+"번 삭제");
+		}  //java.util.ConcurrentModificationException 발생 해결 iter.remove()사용
+			
+		}
+		
+		System.out.println("-------------------------");
+		
 				
 				System.out.println();
-		
+				//[6] 출력 --> 요소삭제 후
+				for(Integer num:list) {
+					System.out.print(num);
+					
+				}
+	
+				System.out.println();
 	}
 
 }
