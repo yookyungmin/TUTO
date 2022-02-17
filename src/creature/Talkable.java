@@ -7,6 +7,7 @@ public interface Talkable {
 	// 8부터 디폴트 메서드도 사용가능	
 	//default int() {System.out.println()}  접근제어가 public 생략가능 일반메서드처럼 {}몸통 있어야함  인터페이스 구현한 클래스에서 
 	//재정의 가능 오버라이딩 구현부변경 매개변수는 그대로
+	//구현시 저븐제어자를 좁게 못함
 	
 	//정적메서드 static method도 사용가능 객체 없이 사용가능 스태틱메소드는구현한 클래스에서 재정의 불가능 
 	//static int () {}

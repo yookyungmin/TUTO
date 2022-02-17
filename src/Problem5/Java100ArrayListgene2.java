@@ -15,6 +15,7 @@ public class Java100ArrayListgene2 {
 		ar.add("강감찬");
 		ar.add("을지문덕");
 		ar.add("김유신");
+		ar.add("김유신");
 		System.out.println(ar.get(3)); //을지문덕
 		String str = ar.get(0); //형변환 없이 바로사용 타입안정성 높아짐  String str = (String)ar.get(3) xx
 //		int str = (int)ar.get(0); //컴파일 단계에서 오류발견

@@ -12,7 +12,8 @@ public class Java100ArrayList3 {
 		
 		//[요소추가 add()
 		arr.add(new Integer[] {11,12,13,14});   //첫번째 요소값
-		arr.add(new Integer[] {21, 22, 23, 24});
+		arr.add(new Integer[] 
+				{21, 22, 23, 24});
 		arr.add(new Integer[] {31, 32, 33,34,35});
 		arr.add(new Integer[] {41,42,43,44});
 		

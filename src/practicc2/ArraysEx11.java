@@ -4,8 +4,10 @@ package practicc2;/*길이가 10인 배열을 만들고 0과 9사이의 값으�
 class ArraysEx11{
 	public static void main(String[] args){
 	
-		int[] numArr = new int[10];
-		int[] counter = new int[10];
+		int[] numArr = new int[10]; //10개 인덱스을 가진 numArr
+		int[] counter = new int[10]; //10 인덱스 counter
+	
+		
 	
 		for(int i = 0; i<numArr.length; i++) {
 			numArr[i] = (int)(Math.random()*10); // 0~9 임의수를 배열에저장
