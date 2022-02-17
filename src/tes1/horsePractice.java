@@ -21,7 +21,6 @@ public class horsePractice {
 			
 			while(true) {
 				int sel = Integer.parseInt(sc.nextLine());
-				
 				if(sel ==1 ) {
 					System.out.println("1우승 경력이 많지만 은퇴를 앞둔말");
 					System.out.println("2 이번달 성적이 제일 좋은말");
@@ -30,6 +29,7 @@ public class horsePractice {
 				
 					int user_horse = Integer.parseInt(sc.nextLine()); //내가 선택한말
 					int winner_horse = (int)(Math.random()*3)+1; // 우승말
+				
 					System.out.println("얼마를 배팅하시겠습니까");
 					int betting = Integer.parseInt(sc.nextLine());
 					

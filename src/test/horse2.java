@@ -1,11 +1,15 @@
 package test;
 import java.util.Scanner;
 
+import javax.security.auth.callback.ChoiceCallback;
+
 public class horse2 {
     private static final int DEFAULT_MONEY = 1000;
 
-    private final Scanner sc = new Scanner(System.in);
+//    private final Scanner sc = new Scanner(System.in);
+    Scanner sc = new Scanner(System.in);
     private int money = DEFAULT_MONEY;
+    int bet =0;
 
     private void showMainMenu() {
         while (true){
@@ -16,7 +20,23 @@ public class horse2 {
 
             int select = this.inputInt();
             if (select == 1) {
-                System.out.println("뭔가 겜하기");
+            	   int winner=(int)(Math.random()*3)+1;
+                   System.out.println("winner:"+winner); //우승말
+            	System.out.println("1우승 경력이 많지만 은퇴를 앞둔말");
+				System.out.println("2 이번달 성적이 제일 좋은말");
+				System.out.println("3 최근 떠오르는 신예인 말");
+				System.out.println("배팅하고 싶은 말을 선택해주세요");
+				int choice = Integer.parseInt(sc.nextLine()); //초이스말
+		         System.out.println("얼마에 배팅하시겠습니까?");
+		         bet=Integer.parseInt(sc.nextLine()); 
+	             money-=bet;
+	             if(choice==winner){
+	                    System.out.println("배팅에 성공하셨습니다. 포상금 2배를 지급합니다.");
+	                   money+=bet*2;
+	                } else {
+	                    System.out.println("배팅에 실패하셨습니다. 돈을 잃으셨습니다.");
+	                }
+		         
             } else if (select == 2) {
                 this.showMoneyMenu();
             } else if (select == 3) {
@@ -65,7 +85,7 @@ public class horse2 {
     public int inputInt() {
         while (true) {
             System.out.print("> ");
-            String input = sc.next();
+            String input = sc.nextLine();
             int number = 0;
             try {
                 number = Integer.parseInt(input);

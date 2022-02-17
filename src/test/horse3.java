@@ -8,8 +8,7 @@ class horse3 {
         int choice =0;
         int bet=0;
         while (true){
-            int winner=(int)(Math.random()*3);
-            System.out.println("winner:"+winner);
+         
             System.out.println("1: 게임 시작");
             System.out.println("2: 잔액 충전");
             System.out.println("3: 잔액 조회");
@@ -19,6 +18,8 @@ class horse3 {
             int input = Integer.parseInt(sc.nextLine());
 
             if (input==1){
+            	   int winner=(int)(Math.random()*3)+1;
+                   System.out.println("winner:"+winner);
                 System.out.println("1. 우승 경력이 많지만 은퇴를 앞둔 말");
                 System.out.println("2. 이번달 성적이 제일 좋은 말");
                 System.out.println("3. 최근에 떠오르는 신예인 말");
