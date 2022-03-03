@@ -1,6 +1,6 @@
 package practicc2;
 
-import jdk.internal.org.objectweb.asm.tree.IntInsnNode;
+//import jdk.internal.org.objectweb.asm.tree.IntInsnNode;
 //2차원 배열은 2중for문써야댐 
 public class ArraysEx18 {
 
