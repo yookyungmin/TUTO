@@ -38,6 +38,8 @@ public class KeyBoardTest{
 	KeyBoard k2 = new KeyBoard(50000);
 	
 	k.printkeyy();
+	System.out.println(k.printKey());
+	
 	System.out.println(k2.printKey());
 
 
