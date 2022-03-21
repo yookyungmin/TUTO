@@ -9,7 +9,7 @@ public class Star4{
 }
 	System.out.println();
 }
-}
+	}
 }
 
 /*
@@ -25,4 +25,3 @@ public class Star4{
 
 
  */
-*/
