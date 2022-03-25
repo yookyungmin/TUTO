@@ -7,7 +7,7 @@ public class Alphabe {
 
 	//for 반복문A(65)~Z(90)
 	for(int i = 65; i<=90; i++ ){
-
+		
 		
 		System.out.print((char)i);
 		

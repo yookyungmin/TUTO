@@ -19,17 +19,20 @@ class ATM {
 	Scanner sc = new Scanner(System.in);
 	//nextInt는 엔터키를 쳤을대 입력 두개가 더 들어가서 nextLine이랑 혼합해서 쓸때는 형변환해서 하는게 버퍼문제가 안생김
 	while(true){
+	
 		int sel =Integer.parseInt(sc.nextLine()); // 문자열로 받아서 숫자로 변환
-	if(sel==1)	{
-		System.out.println("남은 계좌 잔액은"+bal+"입니다.");
-	}else if(sel==2){
+		if(sel==1) {
+			System.out.println("남은 계좌 잔액은\"+bal+\"입니다");
+		}
+		else if(sel==2){
 		System.out.println("입금하실 금액을 입력해주세요");
+	
 		long dep = Integer.parseInt(sc.nextLine());
 		bal+=dep;
 		System.out.println("남은 계좌 잔액은"+bal+"입니다.");
 		
 	}else if(sel==3){
-		if(bal==0) {
+		if(bal==0) {//중첩 if문
 			System.out.println("잔액이0원이므로 출력할 수 없습니다.");
 			continue;
 		}
