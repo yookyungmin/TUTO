@@ -32,7 +32,7 @@ class ATM {
 		System.out.println("남은 계좌 잔액은"+bal+"입니다.");
 		
 	}else if(sel==3){
-		if(bal==0) {//중첩 if문
+		if(bal==0) {//중첩 if문 3번을 누르면서 잔액이 0이면
 			System.out.println("잔액이0원이므로 출력할 수 없습니다.");
 			continue;
 		}
@@ -40,6 +40,7 @@ class ATM {
 			System.out.println("남은잔액은"+bal+"입니다.");
 		}
 		System.out.println("출금하실 금액을 입력해주세요");
+	
 		int witd = Integer.parseInt(sc.nextLine());
 		if(bal>=witd){ //계좌 잔액과 출금금액이 같거나 많으면
 			bal-=witd; // 출금
