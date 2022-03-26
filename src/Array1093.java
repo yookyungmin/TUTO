@@ -11,7 +11,7 @@ public class Array1093 {
 		int[] arr = new int[24];
 		
 		for(int i=0; i<N; i++) {
-.			int num =sc.nextInt();
+			int num =sc.nextInt();
 			arr[num-1]+=1;
 		}
 		

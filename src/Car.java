@@ -1,4 +1,4 @@
-package one;
+
 // 캡슐화 (은닉 private)
 
 public class Car {
@@ -22,7 +22,7 @@ public class Car {
 
 
 //상속 extends
-public class MyTaxi {
+class MyTaxi {
 	String name;
 	int currentGear;
 
@@ -36,13 +36,13 @@ public class MyTaxi {
 	}
 
 }
-	public class Taxi extends MyTaxi {
+class Taxi extends Car {
 		int fare;
 		int passenger;
 	}
 	//다형성 
 	//오버라이딩
-	public class MyTaxi extends Taxi {
+	class MyTaxi extends Taxi {
    	public void changeGrear(int gear) {
 		System.out.println("기어를 "+gear+"변경후 고정한다.");
 		currentGear=gear;

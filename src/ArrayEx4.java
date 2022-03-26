@@ -1,4 +1,4 @@
-package practicc2;
+
 public class ArrayEx4 {
 
 	public static void main(String[] args) {
