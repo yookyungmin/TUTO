@@ -5,7 +5,6 @@ public class Audio {
 	public static void main(String[] args) {
 		//상수 사용하기 ->인터페이스명.상수명
 		//맥스볼륨 출력하기
-		
 		System.out.println(RemoteControl.MAX_VOLUME);
 		//Min볼륨에 5더해서출력하기
 		int num = RemoteControl.MIN_VOLUME +5;
@@ -16,7 +15,7 @@ public class Audio {
 		//일반 클래스에 연결후 오버라이딩해서 출력가능
 		Tv tv = new Tv();
 		tv.turnOn();
-		tv.setVolume(50);
+		tv.setVolume(15);
 		tv.turnOff();
 		
 		Lamp lamp =new Lamp();

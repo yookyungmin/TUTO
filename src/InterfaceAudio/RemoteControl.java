@@ -26,7 +26,7 @@ public interface RemoteControl {
 	}
 	@Override
 	String toString();
-	//정적메소드 재저의 불가
+	//정적메소드 재정의 불가
 	static void changeBattery() {
 		System.out.println("건전지를 교환힙니다");
 }
