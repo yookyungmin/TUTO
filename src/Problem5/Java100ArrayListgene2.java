@@ -8,8 +8,7 @@ public class Java100ArrayListgene2 {
 		//ArrayList 제네릭사용
 		ArrayList<String> ar = new ArrayList<String>();
 		
-		
-		//[1]추가 add
+				//[1]추가 add
 		ar.add("홍길동");
 		ar.add("이순신");
 		ar.add("강감찬");
