@@ -1,7 +1,7 @@
 package Interface;
 
 import Problem3.Java100Methodreturn2;
-
+//인터페이스 
 interface Phone{
 	int version = 12;
 	public abstract String getManufacturer();
