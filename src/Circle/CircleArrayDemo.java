@@ -1,6 +1,7 @@
 package Circle;
 
 import javax.crypto.spec.RC2ParameterSpec;
+import javax.swing.plaf.synth.SynthScrollPaneUI;
 import javax.xml.crypto.dsig.spec.C14NMethodParameterSpec;
 
 import practicc2.if_1;
@@ -8,7 +9,7 @@ import practicc2.if_1;
 import java.util.Random;
 
 class Circle {
-	private static double radius;
+	private  double radius;
 	private String color;
 	private final static double PI = 3.141592;
 
@@ -111,13 +112,16 @@ public class CircleArrayDemo{
 		
 		int len = cArr.length; //cArr의 길이만큼 len에 저장
 		
-		Circle tmpCircle1 = cArr[(int)(Math.random()*(len-1))];
-		Circle tmpCircle2 = cArr[(int)(Math.random()*(len-1))];
+		Circle tmpCircle1 = cArr[(int)(Math.random()*(len-1))]; //비교할 객체 1
+		Circle tmpCircle2 = cArr[(int)(Math.random()*(len-1))]; //비교할 객체 2
 		
 	
 		System.out.println(tmpCircle1.show());
 		System.out.println(tmpCircle2.show());
 		
+		System.out.println(tmpCircle1.findArea());
+		System.out.println(tmpCircle2.findCircumference()
+				);
 		 System.out.println("sameCircle > " + Circle.sameCircle(tmpCircle1, tmpCircle2));
 	}
 
