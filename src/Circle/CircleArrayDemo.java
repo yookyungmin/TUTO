@@ -10,7 +10,7 @@ import java.util.Random;
 
 
 /// static을 넣는순간 radius가 메모리 주소에 담겨서 공유되는 변수가 되서
-//모든 서클에 같은 radius를 공유하게 되니까
+//모든 서클에 같은 radius를 공유하게 되니까 적절치 않은 문법
 class Circle {
 	private  double radius;
 	private String color;
