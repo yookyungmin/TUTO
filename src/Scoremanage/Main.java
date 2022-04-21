@@ -1,4 +1,7 @@
 package Scoremanage;
+
+import Problem3.Java100Methodreturn2;
+
 /*
  * 1. 8명의 자바 중간고사 성적을 입력하고 이들의 합과 평균을 구하는 프로그램을 작성하라.
 
@@ -36,7 +39,16 @@ class A {
 	public void insertScore(Student[] student) {
 		this.students = student;
 	}
-	
+	public int getTotalScore() {
+		for(Student student : students) {
+			totalScore+=student.score;
+		}
+		return totalScore;
+	}
+	public double getAverage() {
+		average=(double)totalScore/students.length;
+		return average;
+	}
 }
 public class Main {
 
