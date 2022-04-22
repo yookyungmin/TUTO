@@ -1,6 +1,13 @@
 package Scoremanage;
 
+import java.util.zip.Inflater;
+
+import javax.crypto.spec.DHPublicKeySpec;
+
+import org.omg.CORBA.PUBLIC_MEMBER;
+
 import Problem3.Java100Methodreturn2;
+import practicc2.if_1;
 
 /*
  * 1. 8명의 자바 중간고사 성적을 입력하고 이들의 합과 평균을 구하는 프로그램을 작성하라.
@@ -49,7 +56,47 @@ class A {
 		average=(double)totalScore/students.length;
 		return average;
 	}
+	public String toString() {
+		return "총합 " + students.length +"명(평균"+(int)(average*10)/10f+"점)";
+	}
 }
+
+	class B extends A{ //평균미만학생수 카운트
+		int belowAvg = 0;
+		
+		public void getStudentBelowAvg() {
+			for(Student s:students) {
+				if(s.score < average) {
+					belowAvg++;
+				}
+			}
+			}
+		public String toString() {
+			return "총합 " + students.length + "명 (평균 " + (int)(average*10)/10f + "점) (평균 미만 "+belowAvg+"명)";
+		}
+		
+	}
+	class C extends B{
+		String[] grades = {"A", "B", "C", "D", "F"}; // String 배열
+		int[] gradesCnt = new int[grades.length]; //grades 의길이만큼배열에추가
+		
+		public void getGrade() {
+			for(Student s:students) {
+			if(s.score>=90) {
+				s.grade = "A";
+			}else if(s.score>=80) {
+				s.grade="B";
+			} else if(s.score>=70) {
+				s.grade="C";
+			}else if(s.score>=60) {
+				s.grade = "C";
+			}else {
+				s.grade ="F";
+			}
+			
+			}
+		}
+	}
 public class Main {
 
 	public static void main(String[] args) {
