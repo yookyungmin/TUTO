@@ -1,8 +1,10 @@
 package Scoremanage;
 
+import java.util.Arrays;
 import java.util.zip.Inflater;
 
 import javax.crypto.spec.DHPublicKeySpec;
+import javax.swing.plaf.synth.SynthOptionPaneUI;
 
 import org.omg.CORBA.PUBLIC_MEMBER;
 
@@ -39,7 +41,7 @@ class Student{ //학생 클래스
 }
  */
 class A {
-	Student[] students;
+	Student[] students; // 학생수
 	int totalScore; //성적 합계
 	double average; //성적 평균
 	
@@ -78,9 +80,9 @@ class A {
 	}
 	class C extends B{
 		String[] grades = {"A", "B", "C", "D", "F"}; // String 배열
-		int[] gradesCnt = new int[grades.length]; //grades 의길이만큼배열에추가
+		int[] gradesCnt = new int[grades.length]; //grades 의길이만큼배열에추가 //평점별학생카운트
 		
-		public void getGrade() {
+		public void getGrade() { //평점구하기
 			for(Student s:students) {
 			if(s.score>=90) {
 				s.grade = "A";
@@ -96,11 +98,74 @@ class A {
 			
 			}
 		}
+		public void getGradeCnt() { // 평점별 학생수 카운트
+			for(Student s : students) {
+				switch (s.grade) {
+				case "A":
+					gradesCnt[0]++;
+					break;
+				case "B":
+					gradesCnt[1]++;
+					break;
+				case "C":
+					gradesCnt[2]++;
+					break;
+				case "D":
+					gradesCnt[3]++;
+					break;
+				default:
+					gradesCnt[4]++;
+				}
+				
+			}
+		}
+		public String toString() {
+			return "종합"+students.length +"명 (평균"+(int)(average*10)/10f+"점)";
+		}
+		public void printGraph() { //가로형태 막대그래프 그리기
+			System.out.println(Arrays.toString(gradesCnt));
+			for(int i=0; i<grades.length; i++) {
+				System.out.printf("%s(%d)|", grades[i], gradesCnt[i]);
+				for(int j=0; j<gradesCnt[i]; j++) {
+					System.out.println("*");
+				}
+				System.out.println();
+			}
+			System.out.println("===========");
+			System.out.println(toString());
+		}
 	}
 public class Main {
 
 	public static void main(String[] args) {
-	
+		Student[] s = {new Student(100), new Student(95), new Student(50),
+				new Student(75), new Student(78), new Student(89),
+                new Student(82), new Student(83), new Student(81)
+        };
+		
+		A a = new A();
+		a.insertScore(s);
+		a.getTotalScore();
+		a.getAverage();
+		System.out.println("A클래스 이용:"+a);
+		
+		B b =new B();
+		b.insertScore(s);
+		b.getTotalScore();
+		b.getAverage();
+		b.getStudentBelowAvg();
+		  System.out.println("B클래스 이용: "+b);
+		  
+		C c= new C();
+		c.insertScore(s);
+		c.getTotalScore();
+		c.getAverage();
+		c.getStudentBelowAvg();
+		c.getGrade();
+		c.getGradeCnt();
+		System.out.println("--------");
+		System.out.println("C클래스 이용");
+		c.printGraph();
 
 	}
 
