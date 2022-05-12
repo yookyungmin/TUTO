@@ -12,6 +12,7 @@ class Studentt implements  Comparable{
 	Studentt(String name, int ban, int no, int kor, int eng, int math){
 	this.name = name;
 	this.ban = ban;
+	this.no=no;
 	this.kor = kor;
 	this.eng = eng;
 	this.math = math;
@@ -23,7 +24,7 @@ class Studentt implements  Comparable{
 	return (int)((getTotal()/3f)*10+0.5)/10f;
 	}
 	public String toString(){
-	return name+", " +ban +", "+no+", "+kor   +","+eng+"," +math+", " +getTotal()+","+getAverage();
+	return "이름= "+name+", 반 =" +ban +", 번호 = "+no+", 국어 = "+kor+", 영어 = "+eng+", 수학 = " +math+", 총점 = " +getTotal()+", 평균 ="+getAverage();
 	}
 	public int compareTo(Object o) {// 자신과 비교
 	if(o instanceof Studentt){
