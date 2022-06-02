@@ -3,13 +3,22 @@ public class Star4{
 	public static void main(String[] args){
 	
 	System.out.println("Q4");
-	for(int i=1; i<=5; i++){ //  세로줄 행을 나타내는 반복문 i가 1~5까지 총 5번반복
+	for(int i =0; i<=5; i++){ //  세로줄 행을 나타내는 반복문 i가 1~5까지 총 5번반복
 	for(int j=0; j<5;j++){// 가로줄을나타내는반복문 i번째 세로줄일대 iiiii가 출력
 	System.out.print(i); //순서 i=1이고 j=0~4까지 총 5번 1번을 반복 출력, 11111
 }
 	System.out.println();
 }
 	}
+		
+		
+//		for(int i=0; i<5; i++) {
+//			for(int j= 0; j<5; j++) {
+//				System.out.print(i);
+//			}
+//			System.out.println();
+//		}
+//	}
 }
 
 /*
@@ -23,5 +32,10 @@ public class Star4{
 •...
 •...
 
+11111
+22222
+33333
+44444
+55555
 
  */
